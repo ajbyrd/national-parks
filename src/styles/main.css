@@ -1,0 +1,15 @@
+#container {
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+#visited{
+    border: red dashed 1px;
+}
+
+#notVisited {
+
+border: green solid 1px;
+}
