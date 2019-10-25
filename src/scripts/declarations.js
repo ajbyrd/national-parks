@@ -7,12 +7,24 @@ const parseJSON = response => response.json()
 
 function putParksOnDOM(parks) {
     parks.forEach(function (park) {
+
+    if(park.visited === true) {
         parksDiv.innerHTML += `
-        <article>
+        <article id="visited">
              <h3>${park.name}</h3>
              <p>${park.state}</p>
         </article>
          `
+    }
+else {
+    parksDiv.innerHTML += `
+    <article id="notVisited">
+         <h3>${park.name}</h3>
+         <p>${park.state}</p>
+    </article>
+     `
+    }
+
     })
 }
 
